@@ -18,35 +18,16 @@
 
 oc delete deployments,services,PersistentVolume,PersistentVolumeClaim,Routes -l pattern=wso2apim-pattern-1 -n wso2
 
-oc delete configmaps apim-analytics-1-bin
-oc delete configmaps apim-analytics-1-conf
-oc delete configmaps apim-analytics-1-spark
-oc delete configmaps apim-analytics-1-axis2
-oc delete configmaps apim-analytics-1-datasources
-oc delete configmaps apim-analytics-1-tomcat
-oc delete configmaps apim-analytics-1-conf-analytics
+oc create configmap apim-pub-store-conf --from-file=../confs/apim-pub-store/repository/conf/
+oc create configmap apim-km-conf --from-file=../confs/apim-km/repository/conf/
+oc create configmap apim-pub-store-bin --from-file=../confs/apim-pub-store/bin/
+oc create configmap apim-km-bin --from-file=../confs/apim-km/bin/
+oc create configmap apim-tm-conf --from-file=../confs/apim-tm/repository/conf/
+oc create configmap apim-tm-bin --from-file=../confs/apim-tm/bin/
 
-oc delete configmaps apim-analytics-2-bin
-oc delete configmaps apim-analytics-2-conf
-oc delete configmaps apim-analytics-2-spark
-oc delete configmaps apim-analytics-2-axis2
-oc delete configmaps apim-analytics-2-datasources
-oc delete configmaps apim-analytics-2-tomcat
-oc delete configmaps apim-analytics-2-conf-analytics
-
-oc delete configmaps apim-manager-worker-bin
-oc delete configmaps apim-manager-worker-conf
-oc delete configmaps apim-manager-worker-identity
-oc delete configmaps apim-manager-worker-axis2
-oc delete configmaps apim-manager-worker-datasources
-oc delete configmaps apim-manager-worker-tomcat
-
-oc delete configmaps apim-worker-bin
-oc delete configmaps apim-worker-conf
-oc delete configmaps apim-worker-identity
 oc delete configmaps apim-pub-store-conf
 oc delete configmaps apim-km-conf
-#oc delete configmaps apim-tm-conf
+oc delete configmaps apim-tm-conf
 oc delete configmaps apim-pub-store-bin
 oc delete configmaps apim-km-bin
-#oc delete configmaps apim-tm-bin
+oc delete configmaps apim-tm-bin

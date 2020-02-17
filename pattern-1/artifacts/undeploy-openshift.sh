@@ -18,13 +18,6 @@
 
 oc delete deployments,services,PersistentVolume,PersistentVolumeClaim,Routes -l pattern=wso2apim-pattern-1 -n wso2
 
-oc create configmap apim-pub-store-conf --from-file=../confs/apim-pub-store/repository/conf/
-oc create configmap apim-km-conf --from-file=../confs/apim-km/repository/conf/
-oc create configmap apim-pub-store-bin --from-file=../confs/apim-pub-store/bin/
-oc create configmap apim-km-bin --from-file=../confs/apim-km/bin/
-oc create configmap apim-tm-conf --from-file=../confs/apim-tm/repository/conf/
-oc create configmap apim-tm-bin --from-file=../confs/apim-tm/bin/
-
 oc delete configmaps apim-pub-store-conf
 oc delete configmaps apim-km-conf
 oc delete configmaps apim-tm-conf

@@ -1,6 +1,6 @@
 [server]
-#hostname = "tm.wso2.com"
-node_ip = "127.0.0.1"
+hostname = "wso2apim-tm"
+node_ip = "$env{NODE_IP}"
 server_role = "traffic-manager"
 
 [user_store]

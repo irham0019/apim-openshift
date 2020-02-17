@@ -17,6 +17,7 @@ kind: Deployment
 metadata:
   name: wso2apim-tm
   labels:
+    node-1: wso2apim-tm
     app: wso2apim-tm
     pattern: wso2apim-pattern-1
 spec:
@@ -34,12 +35,21 @@ spec:
         name: wso2apim-tm
         imagePullPolicy: IfNotPresent
         ports:
-        -
-          containerPort: 9763
-          protocol: "TCP"
-        -
-          containerPort: 9443
-          protocol: "TCP"
+          -
+            containerPort: 5672
+            protocol: "TCP"
+          -
+            containerPort: 9711
+            protocol: "TCP"
+          -
+            containerPort: 9611
+            protocol: "TCP"
+          -
+            containerPort: 7711
+            protocol: "TCP"
+          -
+            containerPort: 7611
+            protocol: "TCP"
         env:
           - name: HOST_NAME
             value: "wso2apim-tm"

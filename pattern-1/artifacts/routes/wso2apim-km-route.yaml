@@ -24,6 +24,6 @@ spec:
     targetPort: servlet-https
   to:
     kind: Service
-    name: wso2apim-km
+    name: wso2apim-km-internal
   tls:
     termination: passthrough

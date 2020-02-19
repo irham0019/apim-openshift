@@ -6,9 +6,9 @@
 >In the context of this document, `KUBERNETES_HOME` will refer to a local copy of 
 [`wso2/kubernetes-apim`](https://github.com/wso2/kubernetes-apim/) git repository. 
 
-##### 1. Checkout WSO2 kubernetes-apim  repository using `git clone`:
+##### 1. Checkout WSO2 apim-openshift  repository using `git clone`:
 ```
-git clone https://github.com/wso2/kubernetes-apim.git
+git clone https://github.com/irham0019/apim-openshift.git
 ```
 
 ##### 2. Pull required Docker images from [`WSO2 Docker Registry`](https://docker.wso2.com) using `docker pull`:

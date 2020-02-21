@@ -3,8 +3,6 @@
 
 ## Quick Start Guide
 
->In the context of this document, `KUBERNETES_HOME` will refer to a local copy of 
-[`wso2/kubernetes-apim`](https://github.com/wso2/kubernetes-apim/) git repository. 
 
 ##### 1. Checkout WSO2 apim-openshift  repository using `git clone`:
 ```
@@ -13,6 +11,9 @@ git clone https://github.com/irham0019/apim-openshift.git
 
 ##### 2. Run ./build.sh in base/build.sh to generate the docker images:
     ```
+    ./build.sh
+    ```
+    
 
 * Deploy on Openshift
 
@@ -56,6 +57,4 @@ git clone https://github.com/irham0019/apim-openshift.git
            
 <br>
 
-> Tested in OpenShift v3.6.0 and Kubernetes v1.6.1
-
-> NFS is tested in Kubernetes v1.6.1
+> Tested in OpenShift v3.6.0 

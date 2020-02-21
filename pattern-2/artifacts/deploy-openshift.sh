@@ -43,8 +43,10 @@ oc create configmap apim-pub-store-conf --from-file=../confs/apim-pub-store/repo
 oc create configmap apim-km-conf --from-file=../confs/apim-km/repository/conf/
 oc create configmap apim-pub-store-bin --from-file=../confs/apim-pub-store/bin/
 oc create configmap apim-km-bin --from-file=../confs/apim-km/bin/
-oc create configmap apim-tm-conf --from-file=../confs/apim-tm/repository/conf/
-oc create configmap apim-tm-bin --from-file=../confs/apim-tm/bin/
+oc create configmap apim-tm1-conf --from-file=../confs/apim-tm-1/repository/conf/
+oc create configmap apim-tm1-bin --from-file=../confs/apim-tm-1/bin/
+oc create configmap apim-tm2-conf --from-file=../confs/apim-tm-2/repository/conf/
+oc create configmap apim-tm2-bin --from-file=../confs/apim-tm-2/bin/
 #oc create configmap apim-manager-worker-identity --from-file=../confs/apim-manager-worker/repository/conf/identity/
 #oc create configmap apim-manager-worker-axis2 --from-file=../confs/apim-manager-worker/repository/conf/axis2/
 #oc create configmap apim-manager-worker-datasources --from-file=../confs/apim-manager-worker/repository/conf/datasources/
@@ -74,15 +76,17 @@ sleep 30s
 oc create -f routes/wso2apim-km-route.yaml
 
 
-echo 'deploying wso2apim and wso2apim-km routes ...'
 oc create -f apim-tm/wso2apim-tm-service.yaml
-oc create -f apim-tm/wso2apim-tm-clustering.yaml
-sleep 15s
-echo 'deploying apim manager-worker ...'
-oc create -f apim-tm/wso2apim-tm-deployment.yaml
-sleep 30s
-oc create -f routes/wso2apim-tm-route.yaml
+oc create -f apim-tm/wso2apim-tm-1-service.yaml
+oc create -f apim-tm/wso2apim-tm-2-service.yaml
 
+oc create -f apim-tm/wso2apim-tm-1-volume-claim.yaml
+sleep 30s
+echo 'deploying apim traffic manager ...'
+oc create -f apim-tm/wso2apim-tm-1-deployment.yaml
+oc create -f apim-tm/wso2apim-tm-2-deployment.yaml
+
+sleep 1m
 echo 'deploying services and volume claims ...'
 oc create -f apim-pub-store/wso2apim-service.yaml
 sleep 30s

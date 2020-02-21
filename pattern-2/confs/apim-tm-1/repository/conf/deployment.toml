@@ -1,0 +1,30 @@
+[server]
+hostname = "wso2apim-tm-1"
+node_ip = "$env{NODE_IP}"
+server_role = "traffic-manager"
+
+[user_store]
+type = "database"
+
+[super_admin]
+username = "admin"
+password = "admin"
+create_admin_account = true
+
+[database.shared_db]
+type = "mysql"
+url = "jdbc:mysql://apim-rdbms:3306/shareddb?autoReconnect=true&amp;useSSL=false"
+username = "root"
+password = "root"
+
+[keystore.tls]
+file_name =  "wso2carbon.jks"
+type =  "JKS"
+password =  "wso2carbon"
+alias =  "wso2carbon"
+key_password =  "wso2carbon"
+
+[truststore]
+file_name = "client-truststore.jks"
+type = "JKS"
+password = "wso2carbon"

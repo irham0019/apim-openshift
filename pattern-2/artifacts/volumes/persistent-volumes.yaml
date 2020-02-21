@@ -19,7 +19,7 @@ metadata:
   name: local-pv-2
   labels:
     type: local
-    pattern: wso2apim-pattern-1
+    pattern: wso2apim-pattern-2
 spec:
   capacity:
     storage: 20Gi
@@ -35,7 +35,7 @@ metadata:
   name: local-pv-4
   labels:
     type: local
-    pattern: wso2apim-pattern-1
+    pattern: wso2apim-pattern-2
 spec:
   capacity:
     storage: 2Gi
@@ -54,7 +54,7 @@ metadata:
   name: local-pv-1
   labels:
     type: local
-    pattern: wso2apim-pattern-1
+    pattern: wso2apim-pattern-2
     purpose: apim-analytics-conf-analytics-1
 spec:
   capacity:
@@ -74,7 +74,7 @@ metadata:
   name: local-pv-3
   labels:
     type: local
-    pattern: wso2apim-pattern-1
+    pattern: wso2apim-pattern-2
     purpose: apim-analytics-conf-analytics-2
 spec:
   capacity:
@@ -94,7 +94,7 @@ metadata:
   name: local-pv-5
   labels:
     type: local
-    pattern: wso2apim-pattern-1
+    pattern: wso2apim-pattern-2
     purpose: apim-analytics-data-1
 spec:
   capacity:
@@ -114,7 +114,7 @@ metadata:
   name: local-pv-6
   labels:
     type: local
-    pattern: wso2apim-pattern-1
+    pattern: wso2apim-pattern-2
     purpose: apim-analytics-data-2
 spec:
   capacity:

@@ -16,11 +16,13 @@
 # limitations under the License
 # ------------------------------------------------------------------------
 
-oc delete deployments,services,PersistentVolume,PersistentVolumeClaim,Routes -l pattern=wso2apim-pattern-1 -n wso2
+oc delete deployments,services,PersistentVolume,PersistentVolumeClaim,Routes -l pattern=wso2apim-pattern-2 -n wso2
 
 oc delete configmaps apim-pub-store-conf
 oc delete configmaps apim-km-conf
-oc delete configmaps apim-tm-conf
 oc delete configmaps apim-pub-store-bin
 oc delete configmaps apim-km-bin
-oc delete configmaps apim-tm-bin
+oc delete configmaps apim-tm1-conf
+oc delete configmaps apim-tm1-bin
+oc delete configmaps apim-tm2-conf
+oc delete configmaps apim-tm2-bin

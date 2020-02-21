@@ -17,40 +17,20 @@ kind: Service
 metadata:
   name: wso2apim-tm
   labels:
-    node-1: wso2apim-tm
-    pattern: wso2apim-pattern-1
+    node: tm
+    pattern: wso2apim-pattern-2
 spec:
   ports:
     # ports that this service should serve on
     -
-      name: "jms-tcp"
-      protocol: TCP
-      port: 5672
-    -
-      name: "binary-secure"
-      protocol: TCP
-      port: 9711
-    -
-      name: "binary"
-      protocol: TCP
-      port: 9611
-    -
-      name: "thrift-secure"
-      protocol: TCP
-      port: 7711
-    -
-      name: "thrift"
-      protocol: TCP
-      port: 7611
-    -
-      name: 'servlet-http'
+      name: "http"
       protocol: TCP
       port: 9763
     -
-      name: 'servlet-https'
+      name: "https"
       protocol: TCP
       port: 9443
   # label keys and values that must match in order to receive traffic for this service
   selector:
-    app: wso2apim-tm
-  sessionAffinity: ClientIP
+    node: tm
+  clusterIP: None

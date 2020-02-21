@@ -17,7 +17,7 @@ kind: Route
 metadata:
   name: wso2apim-tm-route
   labels:
-    pattern: wso2apim-pattern-1
+    pattern: wso2apim-pattern-2
 spec:
   host: wso2apim-tm
   port:

@@ -18,7 +18,7 @@ metadata:
   name: wso2apim-km-clustering
   labels:
     node: key-manager
-    pattern: wso2apim-pattern-1
+    pattern: wso2apim-pattern-2
 spec:
   ports:
     # ports that this service should serve on

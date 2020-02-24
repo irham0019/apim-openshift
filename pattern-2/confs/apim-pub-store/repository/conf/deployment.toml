@@ -35,6 +35,22 @@ service_url = "https://wso2apim-km-internal.wso2.svc:${mgt.transport.https.port}
 username = "admin"
 password = "admin"
 
+#[database.shared_db]
+#type = "mssql"
+#url = "jdbc:sqlserver://AMHRAOSQL16DEV1:1433;databaseName=shared_db;SendStringParametersAsUnicode=false"
+#username = "WSO2User"
+#password = "WSO2P@ssw@rd1"
+#driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+#validationQuery = "SELECT 1"
+
+#[database.apim_db]
+#type = "mssql"
+#url = "jdbc:sqlserver://AMHRAOSQL16DEV1:1433;databaseName=apimgtdb;SendStringParametersAsUnicode=false"
+#username = "WSO2User"
+#password = "WSO2P@ssw@rd1"
+#driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+#validationQuery = "SELECT 1"
+
 [keystore.tls]
 file_name =  "wso2carbon.jks"
 type =  "JKS"

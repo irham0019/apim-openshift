@@ -14,17 +14,34 @@ username = "admin"
 password = "admin"
 create_admin_account = true
 
+#[database.shared_db]
+#type = "mysql"
+#url = "jdbc:mysql://apim-rdbms:3306/shareddb?autoReconnect=true&amp;useSSL=false"
+#username = "root"
+#password = "root"
+
+#[database.apim_db]
+#type = "mysql"
+#url = "jdbc:mysql://apim-rdbms:3306/apimgtdb?autoReconnect=true&amp;useSSL=false"
+#username = "root"
+#password = "root"
+
 [database.shared_db]
-type = "mysql"
-url = "jdbc:mysql://apim-rdbms:3306/shareddb?autoReconnect=true&amp;useSSL=false"
-username = "root"
-password = "root"
+type = "mssql"
+url = "jdbc:sqlserver://AMHRAOSQL16DEV1:1433;databaseName=shared_db;SendStringParametersAsUnicode=false"
+username = "WSO2User"
+password = "WSO2P@ssw@rd1"
+driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+validationQuery = "SELECT 1"
 
 [database.apim_db]
-type = "mysql"
-url = "jdbc:mysql://apim-rdbms:3306/apimgtdb?autoReconnect=true&amp;useSSL=false"
-username = "root"
-password = "root"
+type = "mssql"
+url = "jdbc:sqlserver://AMHRAOSQL16DEV1:1433;databaseName=apimgtdb;SendStringParametersAsUnicode=false"
+username = "WSO2User"
+password = "WSO2P@ssw@rd1"
+driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+validationQuery = "SELECT 1"
+
 
 [keystore.tls]
 file_name =  "wso2carbon.jks"

@@ -19,7 +19,7 @@ metadata:
   labels:
     pattern: wso2apim-pattern-2
 spec:
-  host: wso2apim
+  host: wso2apim-wso2.okd.hra.am.mds.honda.com
   port:
     targetPort: servlet-https
   to:

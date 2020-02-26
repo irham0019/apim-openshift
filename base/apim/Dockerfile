@@ -49,6 +49,7 @@ RUN apt-get update \
            telnet \
            iproute2 \
            vim \
+           curl \
 	   sudo && rm -rf /var/lib/apt/lists/*
 
 # creates the user 

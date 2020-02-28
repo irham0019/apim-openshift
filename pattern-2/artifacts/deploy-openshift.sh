@@ -72,7 +72,7 @@ oc create -f apim-km/wso2apim-km-clustering.yaml
 sleep 15s
 echo 'deploying apim manager-worker ...'
 oc create -f apim-km/wso2apim-km-deployment.yaml
-sleep 30s
+sleep 15s
 oc create -f routes/wso2apim-km-route.yaml
 
 
@@ -86,12 +86,12 @@ echo 'deploying apim traffic manager ...'
 oc create -f apim-tm/wso2apim-tm-1-deployment.yaml
 oc create -f apim-tm/wso2apim-tm-2-deployment.yaml
 
-sleep 1m
+
 echo 'deploying services and volume claims ...'
 oc create -f apim-pub-store/wso2apim-service.yaml
-sleep 30s
+sleep 2m
 oc create -f apim-pub-store/wso2apim-publisher-store-deployment.yaml
-sleep 1m
+
 oc create -f routes/wso2apim-route.yaml
 oc create -f routes/wso2apim-gw-route.yaml
 #oc create -f routes/wso2apim-gw-route.yaml

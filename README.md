@@ -1,5 +1,5 @@
 # WSO2 API Manager 3.0.0 Openshift Resources 
-*Kubernetes/Openshift Resources for container-based deployments of WSO2 API Manager (APIM)*
+*Openshift Resources for container-based deployments of WSO2 API Manager (APIM)*
 
 ## Quick Start Guide
 

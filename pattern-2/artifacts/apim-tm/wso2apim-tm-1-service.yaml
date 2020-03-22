@@ -17,7 +17,7 @@ kind: Service
 metadata:
   name: wso2apim-tm-1
   labels:
-    node-1: tm-1
+    app: wso2apim
     pattern: wso2apim-pattern-2
 spec:
   ports:
@@ -44,5 +44,6 @@ spec:
       port: 7611
   # label keys and values that must match in order to receive traffic for this service
   selector:
-    node-1: tm-1
-  clusterIP: None
+    app: wso2apim
+    pattern: wso2apim-pattern-2
+  sessionAffinity: ClientIP

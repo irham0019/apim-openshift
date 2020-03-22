@@ -42,4 +42,4 @@ function docker_build() {
 docker_build docker.wso2.com/wso2am-kubernetes:3.0.0 $apim_dir
 docker_build docker.wso2.com/wso2am-km-kubernetes:3.0.0 $apim_km_dir
 docker_build docker.wso2.com/wso2am-tm-kubernetes:3.0.0 $apim_tm_dir
-#docker_build docker.wso2.com/apim-rdbms-kubernetes:3.0.0 $mysql_dir
+docker_build docker.wso2.com/apim-rdbms-kubernetes:3.0.0 $mysql_dir

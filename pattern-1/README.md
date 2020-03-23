@@ -7,37 +7,40 @@
 #### Update the pattern-1/confs/apim-pub-store/repository/conf/deployment.toml as below
 ```
 [database.shared_db]
-type = "mssql"
-url = "jdbc:sqlserver://<host>:<port>;databaseName=shared_db;SendStringParametersAsUnicode=false"
-username = "<user>"
-password = "<password>"
-driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"
-validationQuery = "SELECT 1"
+type = "mysql"
+url = "jdbc:mysql://apim-rdbms:3306/shareddb?autoReconnect=true&amp;useSSL=false"
+username = "root"
+password = "root"
 
 [database.apim_db]
-type = "mssql"
-url = "jdbc:sqlserver://<host>:<port>;databaseName=apimgtdb;SendStringParametersAsUnicode=false"
-username = "<user>"
-password = "<password>"
-driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"
-validationQuery = "SELECT 1"
+type = "mysql"
+url = "jdbc:mysql://apim-rdbms:3306/apimgtdb?autoReconnect=true&amp;useSSL=false"
+username = "root"
+password = "root"
 ```
 
 #### Update the pattern-1/confs/apim-km/repository/conf/deployment.toml as below
 ```
 [database.shared_db]
-type = "mssql"
-url = "jdbc:sqlserver://<host>:<port>;databaseName=shared_db;SendStringParametersAsUnicode=false"
-username = "<user>"
-password = "<password>"
-driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"
-validationQuery = "SELECT 1"
+type = "mysql"
+url = "jdbc:mysql://apim-rdbms:3306/shareddb?autoReconnect=true&amp;useSSL=false"
+username = "root"
+password = "root"
 
 [database.apim_db]
-type = "mssql"
-url = "jdbc:sqlserver://<host>:<port>;databaseName=apimgtdb;SendStringParametersAsUnicode=false"
-username = "<user>"
-password = "<password>"
-driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"
-validationQuery = "SELECT 1"
+type = "mysql"
+url = "jdbc:mysql://apim-rdbms:3306/apimgtdb?autoReconnect=true&amp;useSSL=false"
+username = "root"
+password = "root"
 ```
+#### Update the pattern-1/confs/apim-km/repository/conf/deployment.toml as below
+```
+[database.shared_db]
+type = "mysql"
+url = "jdbc:mysql://apim-rdbms:3306/shareddb?autoReconnect=true&amp;useSSL=false"
+username = "root"
+password = "root"
+```
+
+
+

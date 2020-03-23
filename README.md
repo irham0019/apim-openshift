@@ -1,5 +1,5 @@
 # WSO2 API Manager 3.0.0 Openshift Resources 
-*Openshift Resources for container-based deployments of WSO2 API Manager (APIM)*
+*Openshift Resources for container-based deployments of WSO2 API Manager (APIM) with MySQL*
 
 ## Quick Start Guide
 
@@ -46,8 +46,7 @@ git clone https://github.com/irham0019/apim-openshift.git
         
         > Sample Access URLs (This will vary based on the pattern)  
         > https://wso2apim  
-        > https://wso2apim-km
-        > https://wso2apim-gw  
+        > https://wso2apim-km 
 
     6. Undeploy any pattern by running `undeploy-openshift.sh` script inside pattern folder (/pattern-X/).
     ```

@@ -10,9 +10,9 @@ git clone https://github.com/irham0019/apim-openshift.git
 ```
 
 ##### 2. Run ./build.sh in base/build.sh to generate the docker images:
-    ```
+```
     ./build.sh
-    ```
+```
     
 
 * Deploy on Openshift
